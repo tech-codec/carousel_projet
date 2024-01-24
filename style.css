@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.container{
+    position: relative;
+    margin: 15% auto;
+    width: 35%;
+    height: 250px;
+    background: #efefef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carrousel{
+    display: flex;
+    transform:translate3d(0,0,0);
+    transition: transform 1s;
+    /*width: 300%;*/
+}
+
+
+.carrousel_item{
+    /*width: 8.33%;*/
+}
+
+
+.carrousel_item .item{
+    position: relative;/** ici nous mettons le item en position relative parce que nous voulons déplacer le nom des personnes vers le bas du item  */
+    height: 250px;
+    margin-right: 8px;
+    border-radius: 10px;
+}
+
+/******* ici nous déplaçons nos text(nom) vers le bas du item *****/
+.item span{
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    color: #fff;
+    font-size: 18px;
+  }
+
+
+.carrousel_item .item_1{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_2{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_3{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_4{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_5{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_6{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_7{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-7.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_8{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_9{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-9.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_10{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-10.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_11{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-11.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carrousel_item .item_12{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/story-12.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.carrousel_prev, .carrousel_next{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:50%;
+    margin-top: -20px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.carrousel_prev{
+    z-index: 1;
+    right: auto;
+    left: 20px;
+}
+
+.carrousel_prev:hover, .carrousel_next:hover{
+    transform: scale(1.2);
+}
+
+
+.carrousel_prev i, .carrousel_next i{
+    font-size: 20px;
+}
+
+
+.carrousel_item:nth-child(4n) .item{
+    margin-right: 0;
+}
+
+.display_none{
+    display: none;
+}
+
+
+
+/***   @media mobile    **/
+
+
+@media(max-width:1020px){
+    .carrousel_item:nth-child(2n) .item{
+        margin-right: 0;
+    }
+}
